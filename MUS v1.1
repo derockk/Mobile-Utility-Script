@@ -1,6 +1,9 @@
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 
+local notif = Instance.new("ScreenGui") 
+notif.Parent = game.Players.LocalPlayer.PlayerGui
+
 local testNotif = Instance.new("TextLabel") 
 testNotif.Text = "Script Activated." 
 testNotif.Size = UDim2.new(0, 100, 0, 30)
@@ -9,7 +12,7 @@ testNotif.BackgroundColor3 = Color3.new(0, 0, 0)
 testNotif.TextColor3 = Color3.new(1, 1, 1)
 testNotif.BackgroundTransparency = 0.5
 testNotif.Visible = false 
-testNotif.Parent = gui
+testNotif.Parent = notif
 
 local gui = Instance.new("ScreenGui")
 gui.Name = "NotificationGui"
