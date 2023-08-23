@@ -256,7 +256,24 @@ local gui = Instance.new("ScreenGui")
  optionButton5.Parent = menuOptions 
   
  local function enableScript5() 
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/yTevezz1/SCRIPTADMINPRISONLIFE/main/H4X-ADMIN-V1"))() 
+     getgenv().FavoriteColor = Color3.fromRGB(0, 0, 255) --(Red, Green, Blue) from 0 to 255
+getgenv().Slotguns = "1" --Change slots 1 to 6 (Maybe bug for guard)
+
+--[[
+slot mode 1 = m9,m4a1,shotgun,ak
+slot mode 2 = m9,ak,shotgun,m4a1
+slot mode 3 = m4a1,shotgun,ak,m9
+slot mode 4 = ak,shotgun,m4a1,m9
+slot mode 5 = m4a1,ak,shotgun,m9
+slot mode 6 = m4a1,ak,shotgun,m9
+]]--
+
+--[[Function Adds:
+st / slot [1 to 6] - Change your Slots (Maybe bug for guard)
+aoped / autoopendoors [true,yes,y,on] - open doors in loop (to disable [false,no,n,off]).
+]]--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/yTevezz1/SCRIPTADMINPRISONLIFE/main/H4X-ADMIN-V2"))() 
   
  testNotif.Visible = true 
  wait(3) 
