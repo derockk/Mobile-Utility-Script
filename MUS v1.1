@@ -285,6 +285,25 @@ wait(3)
 testNotif.Visible = false
 end
 
+local optionButton7 = Instance.new("TextButton") 
+ optionButton7.Text = "Ghost Hub" 
+ optionButton7.Size = UDim2.new(0, 200, 0, 25) 
+ optionButton7.Position = UDim2.new(0, 10, 0, 190) 
+ optionButton7.BackgroundColor3 = Color3.new(0, 0, 0) 
+ optionButton6.TextColor3 = Color3.new(1, 1, 1) 
+ optionButton7.Font = Enum.Font.SourceSansBold 
+ optionButton7.FontSize = Enum.FontSize.Size24 
+ optionButton7.BackgroundTransparency = 0.25 
+ optionButton7.Parent = menuOptions 
+  
+ local function enableScript6() 
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/derockk/Tp-Tool/main/Tp%20Tool"))()
+  
+ testNotif.Visible = true 
+ wait(3) 
+ testNotif.Visible = false 
+ end
+
 optionButton.MouseButton1Click:Connect(enableScript)
 
 optionButton2.MouseButton1Click:Connect(enableScript2) 
@@ -296,6 +315,8 @@ optionButton4.MouseButton1Click:Connect(enableScript4)
 optionButton5.MouseButton1Click:Connect(enableScript5) 
 
 optionButton6.MouseButton1Click:Connect(enableScript6) 
+
+optionButton7.MouseButton1Click:Connect(enableScript7)
 
 local function toggleMenu()
     menuOptions.Visible = not menuOptions.Visible
