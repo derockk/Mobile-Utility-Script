@@ -218,6 +218,36 @@ local function enableScript4()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))();
 end
 
+local optionButton5 = Instance.new("TextButton")
+optionButton5.Text = "Tiger Admin"
+optionButton5.Size = UDim2.new(0, 200, 0, 25)
+optionButton5.Position = UDim2.new(0, 10, 0, 70)
+optionButton5.BackgroundColor3 = Color3.new(0, 0, 0)
+optionButton5.TextColor3 = Color3.new(1, 1, 1)
+optionButton5.Font = Enum.Font.SourceSansBold
+optionButton5.FontSize = Enum.FontSize.Size24
+optionButton5.BackgroundTransparency = 0.25
+optionButton5.Parent = menuOptions
+
+local function enableScript5()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/Script"))()
+end
+
+local optionButton6 = Instance.new("TextButton")
+optionButton6.Text = "Ghost Hub"
+optionButton6.Size = UDim2.new(0, 200, 0, 25)
+optionButton6.Position = UDim2.new(0, 10, 0, 70)
+optionButton6.BackgroundColor3 = Color3.new(0, 0, 0)
+optionButton6.TextColor3 = Color3.new(1, 1, 1)
+optionButton6.Font = Enum.Font.SourceSansBold
+optionButton6.FontSize = Enum.FontSize.Size24
+optionButton6.BackgroundTransparency = 0.25
+optionButton6.Parent = menuOptions
+
+local function enableScript6()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+end
+
 optionButton.MouseButton1Click:Connect(enableScript)
 
 optionButton2.MouseButton1Click:Connect(enableScript2) 
@@ -225,6 +255,10 @@ optionButton2.MouseButton1Click:Connect(enableScript2)
 optionButton3.MouseButton1Click:Connect(enableScript3) 
 
 optionButton4.MouseButton1Click:Connect(enableScript4) 
+
+optionButton5.MouseButtonClick:Connect(enableScript5) 
+
+optionButton6.MouseButtonClick:Connect(enableScript6) 
 
 local function toggleMenu()
     menuOptions.Visible = not menuOptions.Visible
