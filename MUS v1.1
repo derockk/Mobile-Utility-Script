@@ -1,0 +1,199 @@
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "NotificationGui"
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+   
+local runButton = Instance.new("TextButton")
+runButton.Text = "Run"
+runButton.Size = UDim2.new(0, 35, 0, 35)
+runButton.Position = UDim2.new(0, 600, 0, 40) 
+runButton.BackgroundColor3 = Color3.new(0, 0, 0)
+runButton.TextColor3 = Color3.new(1, 1, 1)
+runButton.BackgroundTransparency = 0.5
+runButton.Parent = gui
+
+local stopButton = Instance.new("TextButton")
+stopButton.Text = "Walk"
+stopButton.Size = UDim2.new(0, 35, 0, 35)
+stopButton.Position = UDim2.new(0, 600, 0, 80)
+stopButton.BackgroundColor3 = Color3.new(0, 0, 0)
+stopButton.TextColor3 = Color3.new(1, 1, 1)
+stopButton.BackgroundTransparency = 0.5
+stopButton.Parent = gui
+
+local addButton = Instance.new("TextButton")
+addButton.Text = "MUS v1.0"
+addButton.Size = UDim2.new(0, 100, 0, 30)
+addButton.Position = UDim2.new(0, 105, 0, -31)
+addButton.BackgroundColor3 = Color3.new(0, 0, 0)
+addButton.TextColor3 = Color3.new(1, 1, 1)
+addButton.BackgroundTransparency = 0.5
+addButton.Parent = gui
+
+local window = Instance.new("Frame")
+window.Size = UDim2.new(0, 600, 0, 250)
+window.Position = UDim2.new(0, 20, 0, 25)
+window.BackgroundColor3 = Color3.new(0, 0, 0)
+window.BackgroundTransparency = 0.5
+window.Visible = false
+window.Parent = gui
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Text = "Thank you for using Mobile Utility Script v1.0!"
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.TextColor3 = Color3.new(1, 1, 1)
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.FontSize = Enum.FontSize.Size24
+textLabel.Position = UDim2.new(0, -75, 0, -110)
+textLabel.Parent = window
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Text = "⚠ There may be some bugs in the script but, you'll get a hang of it"
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.TextColor3 = Color3.new(1, 1, 1)
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.FontSize = Enum.FontSize.Size24
+textLabel.Position =UDim2.new(0, 0, 0, 0)
+textLabel.Parent = window
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Text = "Made by Discord AI Chatbot Clyde, Rok, and other Script Creators"
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.TextColor3 = Color3.new(215, 30, 30)
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.FontSize = Enum.FontSize.Size10
+textLabel.Position = UDim2.new(0, -120, 0, 120)
+textLabel.Parent = window
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Text = "Script is still in development."
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.TextColor3 = Color3.new(215, 30, 30)
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.FontSize = Enum.FontSize.Size10
+textLabel.Position = UDim2.new(0, -120, 0, 130)
+textLabel.Parent = window
+
+local closeButton = Instance.new("TextButton")
+closeButton.Text = "Close"
+closeButton.Size = UDim2.new(0, 100, 0, 30)
+closeButton.Position = UDim2.new(0, 105, 0, -31)
+closeButton.BackgroundColor3 = Color3.new(0, 0, 0)
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.BackgroundTransparency = 0.5
+closeButton.Visible = false
+closeButton.Parent = gui
+
+local function addWindow()
+    addButton.Visible = false
+    window.Visible = true
+    closeButton.Visible = true
+end
+
+local function closeWindow()
+    addButton.Visible = true
+    window.Visible = false
+    closeButton.Visible = false
+end
+
+addButton.MouseButton1Click:Connect(addWindow)
+closeButton.MouseButton1Click:Connect(closeWindow)
+
+local runSpeed = 35
+local stopSpeed = 16
+
+local function run()
+    if game.Players.LocalPlayer.Character.Humanoid.FloorMaterial ~= Enum.Material.Air then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = runSpeed
+    end
+end
+
+local function stopRunning()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = stopSpeed
+end
+
+runButton.MouseButton1Click:Connect(run)
+stopButton.MouseButton1Click:Connect(stopRunning)
+
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Universal-Shift-Lock-6655"))()
+ 
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "MenuGui"
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+local menuButton = Instance.new("TextButton")
+menuButton.Text = "M"
+menuButton.Size = UDim2.new(0, 32, 0, 32)
+menuButton.Position = UDim2.new(0, 15, 0, 10)
+menuButton.BackgroundColor3 = Color3.new(0, 0, 0)
+menuButton.TextColor3 = Color3.new(1, 1, 1)
+menuButton.Font = Enum.Font.SourceSansBold
+menuButton.FontSize = Enum.FontSize.Size24
+menuButton.BackgroundTransparency = 0.5
+menuButton.Parent = gui
+
+local menuOptions = Instance.new("Frame")
+menuOptions.Size = UDim2.new(0, 500, 0, 250)
+menuOptions.Position = UDim2.new(0, 75, 0, 30)
+menuOptions.BackgroundColor3 = Color3.new(0, 0, 0)
+menuOptions.Visible = false
+menuOptions.BackgroundTransparency = 0.5
+menuOptions.Parent = gui
+
+local menuText = Instance.new("TextLabel")
+menuText.Text = "Script Menu" 
+menuText.Size = UDim2.new(0, 480, 0, 25)
+menuText.Position = UDim2.new(0, 10, 0, 10)
+menuText.BackgroundColor3 = Color3.new(0, 0, 0)
+menuText.Font = Enum.Font.SourceSansBold
+menuText.FontSize = Enum.FontSize.Size24
+menuText.TextColor3 = Color3.new(1, 1, 1)
+menuText.BackgroundTransparency = 0.25
+menuText.Parent = menuOptions
+
+local optionButton = Instance.new("TextButton")
+optionButton.Text = "Enable MobileKeyboard"
+optionButton.Size = UDim2.new(0, 200, 0, 25)
+optionButton.Position = UDim2.new(0, 10, 0, 40)
+optionButton.BackgroundColor3 = Color3.new(0, 0, 0)
+optionButton.TextColor3 = Color3.new(1, 1, 1)
+optionButton.Font = Enum.Font.SourceSansBold
+optionButton.FontSize = Enum.FontSize.Size24
+optionButton.BackgroundTransparency = 0.25
+optionButton.Parent = menuOptions
+
+local function enableScript()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end
+
+local optionButton2 = Instance.new("TextButton")
+optionButton2.Text = "Enable Infinite Yield"
+optionButton2.Size = UDim2.new(0, 200, 0, 25)
+optionButton2.Position = UDim2.new(0, 10, 0, 70)
+optionButton2.BackgroundColor3 = Color3.new(0, 0, 0)
+optionButton2.TextColor3 = Color3.new(1, 1, 1)
+optionButton2.Font = Enum.Font.SourceSansBold
+optionButton2.FontSize = Enum.FontSize.Size24
+optionButton2.BackgroundTransparency = 0.25
+optionButton2.Parent = menuOptions
+
+local function enableScript2()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Infinite-Yield-6163"))()
+end
+
+optionButton.MouseButton1Click:Connect(enableScript)
+
+optionButton2.MouseButton1Click:Connect(enableScript2) 
+
+local function toggleMenu()
+    menuOptions.Visible = not menuOptions.Visible
+end
+
+menuButton.MouseButton1Click:Connect(toggleMenu) 
